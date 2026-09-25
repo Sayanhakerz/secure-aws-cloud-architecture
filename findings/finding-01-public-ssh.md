@@ -26,6 +26,6 @@ AWS Systems Manager Session Manager was successfully used to access the EC2 inst
 
 ### Evidence
 
-- `evidence/04-insecure-security-group.png`
-- `evidence/06-hardened-security-group.png`
-- `evidence/09-ssm-session-validation.png`
+- `04-insecure-security-group.png`
+- `06-hardened-security-group.png`
+- `09-ssm-session-validation.png`
