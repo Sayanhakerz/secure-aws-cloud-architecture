@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Id": "SecureCloudLabEncryptionPolicy",
+  "Statement": [
+    {
+      "Sid": "DenyObjectsNotUsingKMS",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::secure-cloud-lab-data-84927/*",
+      "Condition": {
+        "ArnNotEqualsIfExists": {
+          "s3:x-amz-server-side-encryption-aws-kms-key-id": "arn:aws:kms:us-east-1:489098429736:key/d6794f13-afa2-416c-9d57-aafbdd9322d2"
+        }
+      }
+    }
+  ]
+}
